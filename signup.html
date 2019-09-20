@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<title>Sign Up</title>
+		<link href="main.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		<div id="header">
+			<a href="index.html"><img src="logof.png"></a>
+            <input type="text" name="search" placeholder="Search for movies">
+			<ul>
+				<li><a href="login.html">Log in</a></li>
+				<li><a class="active" href="signup.html">Sign up</a></li>
+			</ul>
+		</div>
+		
+		<div class="main">
+			<form name="signup" method="post" action='http://localhost/insertusers.php' onsubmit="return validate()">
+				<label for="name">Name:&nbsp;</label>
+				<input type="text" name="name" id="name" size="25px" required onchange="return validateName()">&nbsp;&nbsp;
+				<label id="nameError" class="error"></label><br><br>
+	
+				<label for="email">Email Id:&nbsp;</label>
+				<input type="text" name="email" id="email" required size="35px" onchange="return validateEmail()">&nbsp;&nbsp;
+                <label id="emailError" class="error"></label><br><br>
+				
+				<label for="phone">Phone:&nbsp;</label>
+				<input type="text" name="phone" id="phone" size="15px" required onchange="return validatePhone()">&nbsp;&nbsp;
+				<label id="phoneError" class="error"></label><br><br>
+				
+				<label for="dob">Date of birth:&nbsp;</label>
+				<input type="date" name="dob" id="dob" required onchange="return validateDate()">&nbsp;&nbsp;
+				<label id="dobError" class="error"></label><br><br>
+				
+				<label for="password">Set up a password:&nbsp;</label>
+				<input type="password" name="password" id="password" required size="12px" onchange="return validatePassword()">&nbsp;&nbsp;
+				<label id="passwordError" class="error"></label><br><br>
+				
+				<input class=" button" type="submit" value="Sign up">
+			</form>
+		</div>
+		<div id="footer"></div>
+		<script type="text/javascript" language="JavaScript">
+			function validate()
+			{
+				if(!validateName() | !validateEmail() | !validatePhone() | !validatePassword() | !validateDate())
+					return false;
+				else
+					return true;
+			}
+			
+			function validateName()
+			{
+				name = document.getElementById("name").value;
+				reg = /^[A-Za-z]+\s[A-Za-z]+$/;
+				
+				if(!reg.test(name))
+				{
+					document.getElementById("nameError").innerHTML="Please enter a valid name";
+					return false;
+				}
+				else
+				{
+					document.getElementById("nameError").innerHTML="";
+					return true;
+				}
+			}
+			
+			function validateEmail()
+			{
+				email = document.getElementById("email").value;
+				reg = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+				
+				if(email=="")
+				{
+					document.getElementById("emailError").innerHTML="Please enter an email id";
+					return false;
+				}
+				
+				else if(!reg.test(email))
+				{
+					document.getElementById("emailError").innerHTML="Please enter a valid email id";
+					return false;
+				}
+				else
+				{
+					document.getElementById("emailError").innerHTML="";
+					return true;
+				}
+			}
+			
+			function validatePassword()
+			{
+				password = document.getElementById("password").value;
+				
+                reg1 = /\d{1}/;
+                reg2 = /[A-Z]{1}/;
+                reg3 = /[~`!@#$%^&*?.,<>:;()+={}|-]{1}/;
+				
+                if(password.length<8)
+                {
+                    document.getElementById("passwordError").innerHTML="Password must be at least 8 characters in length";
+					return false;
+                }
+                else if(!reg1.test(password) | !reg2.test(password) | !reg3.test(password))
+                {
+                    document.getElementById("passwordError").innerHTML="Should contain at least 1 upper case, numeric, and any of the special characters";
+					return false;
+                }
+                else
+				{
+					document.getElementById("passwordError").innerHTML="";
+					return true;
+				}
+			}
+			
+			function validatePhone()
+			{
+				phone = document.getElementById("phone").value;
+				reg = /^[0-9]{10}$/;
+				
+				if(!reg.test(phone))
+				{
+					document.getElementById("phoneError").innerHTML="Please enter a valid phone number";
+					return false;
+				}
+				else
+				{
+					document.getElementById("phoneError").innerHTML="";
+					return true;
+				}
+			}
+            
+            function validateDate()
+			{
+                return true;
+			}
+		</script>
+	</body>
+</html>

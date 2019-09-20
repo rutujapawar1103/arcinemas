@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<title>Movie</title>
+		<link href="main.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+        <div id="header">
+            <a href="index.html"><img src="logof.png"></a>
+            <input type="text" name="search" placeholder="Search for movies">
+            <ul>
+				<li><a href="login.html">Log in</a></li>
+				<li><a href="signup.html">Sign up</a></li>
+			</ul>
+		</div>
+			
+		<div class="submain">
+            <img src="stree.jpg">	
+			<div id="heading">
+				<h1>Stree</h1>
+				<p>HINDI</p>
+				<input type="label" value="Comedy">
+				<input type="label" value="Horror">
+				<p>Date: 31 August 2018</p>
+				<p>Time: 2 hrs 10 mins</p>
+				<img src="like.jpg">
+				<h2>83%</h2>
+				<h6>238,131 votes</h6>
+			</div>
+                <iframe width="560" height="340" src="https://www.youtube.com/embed/gzeaGcLLl_A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+        <div class="clear"></div>
+		<div id="dates">
+            <ul id="select">
+                <li><input type="button" value="Today"></li>
+                <li><input type="button" value="Tomorrow"></li>
+			</ul>
+            <ul id="follow">
+                <li><img src="fb.svg"></li>
+                <li><img src="instagram.png"></li>
+                <li><img src="g.png"></li> 
+                <li><img src="linked.png"></li>
+                <li><img src="yt.png"></li>
+                <li><img src="tweet.png"></li>
+            </ul>
+		</div>
+        <div id="timing">
+            <h1>Screen 1</h1>
+            <form method="get" action="http://localhost/selectseats.php">
+		        <ul>
+		            <li><input type="submit" value="09:30 AM" onclick='getShowTime(this.value)'><span><p>Rs. 150<br>DRESS CIRCLE</p></span></li>
+		            <li><input type="submit" value="12:00 PM" onclick='getShowTime(this.value)'><span><p>Rs. 180<br>DRESS CIRCLE</p></span></li>
+		            <li><input type="submit" value="02:30 PM" onclick='getShowTime(this.value)'><span><p>Rs. 220<br>DRESS CIRCLE</p></span></li>
+		            <li><input type="submit" value="05:00 PM" onclick='getShowTime(this.value)'><span><p>Rs. 250<br>DRESS CIRCLE</p></span></li>
+		            <li><input type="submit" value="07:30 PM" onclick='getShowTime(this.value)'><span><p>Rs. 300<br>DRESS CIRCLE</p></span></li>
+		            <li><input type="submit" value="10:00 PM" onclick='getShowTime(this.value)'><span><p>Rs. 250<br>DRESS CIRCLE</p></span></li>
+		            <input type="text" id="showtime" name="showtime" value="" style="display:none">
+		        </ul>
+		    </form>
+            <h1>Screen 2</h1>
+            <ul>
+                <li><input type="button" value="9:30 AM"></li>
+                <li><input type="button" value="12:00 PM"></li>
+                <li><input type="button" value="2:30 PM"></li>
+                <li><input type="button" value="5:00 PM"></li>
+                <li><input type="button" value="7:30 PM"></li>
+                <li><input type="button" value="10:00 PM"></li>
+            </ul>
+            <h1>Screen 3</h1>
+            <ul>
+                <li><input type="button" value="9:30 AM"></li>
+                <li><input type="button" value="12:00 PM"></li>
+                <li><input type="button" value="2:30 PM"></li>
+                <li><input type="button" value="5:00 PM"></li>
+                <li><input type="button" value="7:30 PM"></li>
+                <li><input type="button" value="10:00 PM"></li>
+            </ul>
+            <h1>Screen 4</h1>
+            <ul>
+                <li><input type="button" value="9:30 AM"></li>
+                <li><input type="button" value="12:00 PM"></li>
+                <li><input type="button" value="2:30 PM"></li>
+                <li><input type="button" value="5:00 PM"></li>
+                <li><input type="button" value="7:30 PM"></li>
+                <li><input type="button" value="10:00 PM"></li>
+            </ul>
+        </div>
+        <div id="related">
+            <h1>Related Movies:</h1>
+            <img id="tumbbad" src="tumbbad.jpg">
+            <img id="like" src="like.png">
+           	<p>82% &nbsp;&nbsp;&nbsp;Tumbbad</p>
+        </div>
+        
+        <script>
+        	function getShowTime(str)
+        	{
+        		document.getElementById('showtime').value = str;
+        	}
+        </script>
+	</body>
+</html>

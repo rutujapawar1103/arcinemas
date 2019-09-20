@@ -1,0 +1,371 @@
+body
+{
+    margin: 0px;
+    background-color: whitesmoke;
+}
+
+#header
+{
+    background-color: darkcyan;
+	height: 100px;
+}
+
+#header img
+{
+    height: 70px;
+    margin-left: 30px;
+    margin-top: 15px;
+    float: left;
+}
+
+#header input
+{
+    width: 650px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 28px;
+    margin-left: 30px;
+    float: left;
+    background-image: url(search.png);
+    background-repeat: no-repeat;
+    background-position: right; 
+}
+
+#header ul
+{
+	list-style: none;		/*To make bullets disappear*/
+	float: right;
+	margin-top: 35px;
+	margin-right: 20px;
+}
+
+#header ul li
+{
+    font-family: Helvetica;
+	float: left;			/*For the list to be horizontal*/
+	height: 30px;
+	width: 100px;
+	border-right: 2px solid white;
+	text-align: center;
+}
+
+#header ul li:last-child
+{
+	border-right: none;
+	padding-left: 6px;
+}
+
+#header ul li a
+{
+	text-decoration: none;
+    color: white;
+	line-height: 30px;		/*To vertically center the text in the list element. It's value should be around the height of the element*/
+	font-size: 25px;
+	text-align: center;
+}
+
+.main
+{
+	margin-top: 20px;
+	padding-left: 33px;
+}
+
+.main form
+{
+	padding: 25px 0px;
+	font-size: 25px;
+}
+
+.main form label
+{
+	color: #000;
+}
+
+.main form input
+{
+	margin: 0px;
+	font-size: 20px;
+}
+
+.main form input[type="checkbox"]
+{
+  width: 15px;
+  height: 15px;
+}
+
+.main form .error
+{
+	color: red;
+	font-size: 20px;
+}
+
+.main form .button
+{
+	font-size: 22px;
+}
+
+.movie
+{
+	width: 240px;
+	float: left;
+	margin: 10px 0px;
+	margin-right: 10px;
+}
+
+.movie img
+{
+	width: 240px;
+	height: 340px;
+}
+
+.movie a:hover
+{
+	opacity: 0.9;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.submain
+{
+	height: 400px;
+	background-color: black;
+}
+
+.submain img
+{
+	width: 240px;
+	height: 340px;
+	margin: 30px 0px;
+	margin-left: 33px;
+	float: left;
+}
+
+.submain iframe
+{
+	margin: 30px 0px;
+	margin-right: 33px;
+	float: right;	
+}
+
+.submain #heading
+{
+	float: left;
+}
+
+.submain #heading h1
+{
+	color: white;
+	margin-top: 80px;
+	margin-left: 20px;
+	font-size: 36px;
+}
+
+.submain #heading p
+{
+	color: white;
+	margin-left: 20px;
+}
+
+.submain #heading input
+{
+	margin-left: 20px;
+	width: 80px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	border-radius: 20px;
+	padding: 6px;
+}
+
+.submain #heading img
+{
+	margin-left: 0px;
+	height: 30px;
+	width: 50px;
+}
+
+.submain #heading h2
+{
+	color: white;
+	margin-top: 45px;
+}
+
+.submain #heading h6
+{
+	color: white;
+}
+
+#dates
+{
+	background-color: white;
+    height: 50px;
+}
+
+#dates #select
+{
+	list-style: none;
+    float: left;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+#dates #select li
+{
+	display: inline;
+}
+
+#dates #select li input
+{
+    margin-right: 20px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: white;
+    color: darkcyan;
+    font-size: 18px;
+    border-color: darkcyan;
+}
+
+#dates #select li input:hover
+{
+    background-color: darkcyan;
+    color: white;
+    cursor: pointer;
+}
+
+#dates #follow
+{
+    list-style: none;
+    float: right;
+    margin-top: 10px;
+}
+
+#dates #follow li
+{
+    display: inline;
+    margin-right: 10px;
+}
+
+#dates #follow li img
+{
+    height: 35px;
+}
+
+#timing
+{
+    background-color: white;
+    margin-left: 55px;
+    margin-top: 30px;
+    height: 800px;
+    float: left;
+    width: 65%
+}
+
+#timing h1
+{
+    margin-left: 40px;
+}
+
+#timing ul
+{
+    list-style: none;
+    margin-bottom: 100px;
+}
+
+#timing ul li
+{
+    display: inline;
+    margin-right: 30px;
+}
+
+#timing ul li input
+{
+    background-color: white;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    color: blue;
+    font-size: 18px;
+    border-color: blue;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+#timing ul li span
+{
+    visibility: hidden;
+    width: 120px;
+    border-color: black;
+    margin-left: -110px;
+    top: 740px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+#timing ul li span::after
+{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+#timing ul li:hover span
+{
+    visibility: visible;
+    box-shadow: 0px 0px 18px #888888;
+}
+
+#timing ul li span p
+{
+    font-size: 12px;
+}
+
+#related
+{
+    background-color: white;
+    margin-top: 25px;
+    margin-right: 15px;
+    height: 590px;
+    width: 28%;
+    float: right;
+}
+
+#related h1
+{
+    margin-left: 15px;
+    
+}
+
+#related #tumbbad
+{
+    margin-left: 15px;
+    height: 440px;
+    width: 330px;
+}
+
+#related #like
+{
+	height: 22px;
+	width: 25px;
+	margin-top: 20px;
+	margin-left: 70px;
+	margin-right: 10px;
+	float: left
+}
+
+#related p
+{
+	font-size: 18px;
+	margin-top: 20px;
+}
